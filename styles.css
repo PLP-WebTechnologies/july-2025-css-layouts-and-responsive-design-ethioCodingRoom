@@ -1,0 +1,248 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    line-height: 1.6;
+    padding: 1.5rem;
+    font-size: 1rem;
+}
+
+/* Header navigation */
+header nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: navy;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 16px 0 32px;
+}
+
+/* Header text */
+header h1 {
+    color: limegreen;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+/* Navigation links */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    margin: 0 6px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: midnightblue;
+    border-radius: 4px;
+}
+
+/* Sections */
+section {
+    background-color: darkslategray;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    border: 1px solid navy;
+}
+
+/* Headings */
+h2 {
+    color: gold;
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+h3 {
+    color: skyblue;
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs and lists */
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+ul {
+    margin-left: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+/* Form styling */
+.form-fieldset {
+    border: 2px solid limegreen;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: darkslategray;
+}
+
+legend {
+    color: limegreen;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    margin: 12px 0 4px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+    font-size: 1rem;
+}
+
+/* Button */
+.button,
+button[type="submit"] {
+    background-color: navy;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button:hover,
+button:hover {
+    background-color: midnightblue;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: lightgray;
+    padding: 16px 0;
+    border-top: 1px solid gray;
+    margin-top: 40px;
+}
+
+/* Contact nav */
+#contact nav {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/*
+   Flexbox Enhancements for Navigation (Mobile)
+   
+*/
+@media (max-width: 480px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 6px 0;
+    }
+}
+
+/* 
+   Grid Layout for Main Content
+
+ */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 2fr 1fr; 
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        gap: 3rem;
+    }
+}
+
+/* 
+   Responsive Typography & Section Sizing
+*/
+@media (min-width: 600px) {
+    body {
+        font-size: 1.1rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+    .form-fieldset {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    section {
+        width: 80%;
+        margin: 2rem auto;
+    }
+}
+
+/*
+   Optional Flexbox Card Layout
+
+*/
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.card {
+    flex: 1 1 200px;
+    background: steelblue;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+}
